@@ -1,16 +1,33 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "polygon-frontend",
+  "private": false,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "tsc && eslint \"./**/*.{ts,vue}\""
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@types/node": "^18.17.1",
-    "nuxt": "^3.6.5"
-  }
+    "@typescript-eslint/parser": "^6.2.0",
+    "eslint": "^8.46.0",
+    "eslint-config-hardcore": "^41.0.0",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.16.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "nuxt": "^3.6.5",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  },
+  "version": "0.01",
+  "main": "app.vue",
+  "repository": "https://github.com/BMFreed/polygon-frontend.git",
+  "author": "Биницкий Богдан",
+  "license": "MIT"
 }
