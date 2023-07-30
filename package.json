@@ -17,14 +17,17 @@
     "@typescript-eslint/parser": "^6.2.0",
     "eslint": "^8.46.0",
     "eslint-config-hardcore": "^41.0.0",
+    "eslint-plugin-boundaries": "^3.1.1",
     "eslint-plugin-nested-if": "^1.0.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",
     "nuxt": "^3.6.5",
     "typescript": "^5.1.6"
   },
+  "dependencies": {
+    "deepmerge": "^4.3.1"
+  },
   "version": "0.01",
-  "main": "app.vue",
   "repository": "https://github.com/BMFreed/polygon-frontend.git",
   "author": "Биницкий Богдан",
   "license": "MIT"

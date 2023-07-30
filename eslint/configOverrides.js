@@ -6,5 +6,6 @@ module.exports = {
     'import/no-commonjs': 'off',
     'import/unambiguous': 'off',
     'import/extensions': 'off',
+    'import/no-internal-modules': 'off',
   },
 }

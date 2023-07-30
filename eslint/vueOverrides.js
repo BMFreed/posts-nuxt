@@ -9,5 +9,6 @@ module.exports = {
       },
     ],
     'vue/block-lang': ['error', { script: { lang: 'ts' } }],
+    'vue/multi-word-component-names': 'off',
   },
 }
