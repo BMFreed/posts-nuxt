@@ -4345,7 +4345,7 @@ eslint-config-hardcore@^41.0.0:
     prettier "^3.0.0"
     putout "^30.7.0"
 
-eslint-config-prettier@^8.3.0, eslint-config-prettier@^8.8.0, eslint-config-prettier@^8.9.0:
+eslint-config-prettier@^8.3.0, eslint-config-prettier@^8.8.0:
   version "8.9.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.9.0.tgz#094b6254b2804b0544f7cee535f802b6d29ee10b"
   integrity sha512-+sbni7NfVXnOpnRadUA8S28AUlsZt9GjgFvABIRL9Hkn8KqNzOp+7Lw4QWtrwn20KzU3wqu1QoOj2m+7rKRqkA==
@@ -4582,6 +4582,11 @@ eslint-plugin-n@^16.0.0, eslint-plugin-n@^16.0.1:
     minimatch "^3.1.2"
     resolve "^1.22.2"
     semver "^7.5.3"
+
+eslint-plugin-nested-if@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-nested-if/-/eslint-plugin-nested-if-1.0.0.tgz#f6e0046945e39ba8f85806679827ad1661b4c477"
+  integrity sha512-Gy06CKu2sJlXbAG1ea+VYUy6oXoTwOj2nsmTuHB1dJTdpcMjddjkWzxfxOEnvO902YhUGBiCZPnMk3u+t1g2hA==
 
 eslint-plugin-no-constructor-bind@^2.0.4:
   version "2.0.4"
@@ -4939,7 +4944,7 @@ eslint-plugin-vue-scoped-css@^2.5.0:
     postcss-selector-parser "^6.0.9"
     postcss-styl "^0.12.0"
 
-eslint-plugin-vue@^9.15.1, eslint-plugin-vue@^9.16.0, eslint-plugin-vue@^9.4.0, eslint-plugin-vue@^9.7.0:
+eslint-plugin-vue@^9.15.1, eslint-plugin-vue@^9.4.0, eslint-plugin-vue@^9.7.0:
   version "9.16.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-9.16.0.tgz#67b85756126e2a6989a5c2eeb8540a4afc91aa99"
   integrity sha512-SonAuvQXFm9HBV9ww/YkYZVYPMR8ptxxuJwcKGnG9A65SyvNANP9MKlfnC49L6DIwt/YEQZwZWEMHOkL1d5s1A==

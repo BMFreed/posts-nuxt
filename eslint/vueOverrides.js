@@ -8,13 +8,6 @@ module.exports = {
         order: ['script', 'template', 'style'],
       },
     ],
-    'vue/block-lang': [
-      'error',
-      {
-        script: {
-          lang: 'ts',
-        },
-      },
-    ],
+    'vue/block-lang': ['error', { script: { lang: 'ts' } }],
   },
-};
+}

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const count = ref(0);
+const count = ref(0)
 const increaseCount = () => {
-  count.value += 1;
-};
+  count.value += 1
+}
 </script>
 
 <template>

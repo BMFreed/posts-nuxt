@@ -1,6 +1,6 @@
-const prettierConfig = require('./.prettierrc');
-const vueOverrides = require('./eslint/vueOverrides');
-const configOverrides = require('./eslint/configOverrides');
+const prettierConfig = require('./.prettierrc')
+const vueOverrides = require('./eslint/vueOverrides')
+const configOverrides = require('./eslint/configOverrides')
 
 module.exports = {
   env: {
@@ -8,24 +8,19 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  plugins: ['eslint-plugin-nuxt', 'eslint-plugin-vue'],
-  extends: [
-    'plugin:vue/vue3-strongly-recommended',
-    'plugin:nuxt/recommended',
-    'hardcore',
-    'hardcore/vue',
-  ],
+  plugins: ['eslint-plugin-nuxt', 'eslint-plugin-vue', 'nested-if'],
+  extends: ['plugin:nuxt/recommended', 'hardcore', 'hardcore/vue'],
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
   rules: {
+    quotes: ['error', 'single'],
     'arrow-body-style': ['error', 'always'],
     'func-style': ['error', 'expression'],
     'putout/putout': 'off',
     'ext/lines-between-object-properties': ['error', 'never'],
-    quotes: ['error', 'single'],
     'prettier/prettier': ['error', prettierConfig],
     'max-len': [
       'error',
@@ -38,6 +33,7 @@ module.exports = {
         ignoreRegExpLiterals: true,
       },
     ],
+    'nested-if/nested-if-statements': ['error', 2],
   },
   overrides: [configOverrides, vueOverrides],
-};
+}
