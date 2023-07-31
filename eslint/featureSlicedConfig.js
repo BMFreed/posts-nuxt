@@ -13,7 +13,6 @@ module.exports = {
       { type: 'widgets', pattern: 'widgets/*' },
       { type: 'features', pattern: 'features/*' },
       { type: 'entities', pattern: 'entities/*' },
-
       // Указываем, что именно в src, потому что папки shared у нас могут быть и в слайсах
       { type: 'shared', pattern: 'src/*/shared/*' },
     ],
