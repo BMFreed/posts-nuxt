@@ -51,6 +51,12 @@ module.exports = {
       { vue: 'always' },
     ],
     ...typeScriptRules,
+    'no-duplicate-imports': 'off',
+    'import/no-duplicates': 'off',
+    'vuejs-accessibility/no-static-element-interactions': 'off',
+    'vuejs-accessibility/click-events-have-key-events': 'off',
+    'vue-scoped-css/enforce-style-type': 'off',
+    'total-functions/no-partial-division': 'off',
   },
   overrides: [configOverrides, vueOverrides],
 }
