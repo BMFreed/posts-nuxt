@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { range } from 'remeda'
 
-import type { IPagination } from '../model/IPagination'
+interface IProps {
+  currentPage: number
+  numberOfPages: number
+  onButtonClick: (pageNumber: number) => void
+}
 
-defineProps<IPagination>()
+defineProps<IProps>()
 </script>
 
 <template>

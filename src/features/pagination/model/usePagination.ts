@@ -1,19 +1,14 @@
+import type { IPagination } from './IPagination'
+
 interface IParameters<Item> {
   readonly items: Ref<Item[] | null>
   readonly pageSize: number
 }
 
-interface IResult<Item> {
-  currentPage: Ref<number>
-  numberOfPages: ComputedRef<number>
-  paginatedItems: ComputedRef<Item[]>
-  setCurrentPage: (newPage: number) => void
-}
-
 export const usePagination = <Item>({
   items,
   pageSize,
-}: IParameters<Item>): IResult<Item> => {
+}: IParameters<Item>): IPagination<Item> => {
   const currentPage = ref(1)
   const numberOfPages = computed(() => {
     return items.value ? Math.ceil(items.value.length / pageSize) : 0

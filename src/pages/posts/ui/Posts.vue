@@ -1,38 +1,28 @@
 <script setup lang="ts">
-import type { IPost } from '~/src/entities/post'
 import { Post } from '~/src/entities/post'
-import { Pagination, usePagination } from '~/src/features/pagination'
+import { Pagination } from '~/src/features/pagination'
 import { ActivePost } from '~/src/widgets/activePost'
 
-const { data: posts } = await useFetch<IPost[]>(() => {
-  return 'https://6082e3545dbd2c001757abf5.mockapi.io/qtim-test-work/posts/'
-})
-
-const activePostId = ref<string>()
-const setActivePostId = (id: string | undefined): void => {
-  activePostId.value = id
-}
-
-const closeActivePost = (): void => {
-  setActivePostId(undefined)
-}
+import { usePosts } from '../model/usePosts'
 
 const {
-  currentPage,
-  numberOfPages,
-  setCurrentPage,
-  paginatedItems: paginatedPosts,
-} = usePagination({
-  items: posts,
-  pageSize: 12,
-})
+  posts,
+  activePostId,
+  closeActivePost,
+  pagination: {
+    paginatedItems: paginatedPosts,
+    currentPage,
+    setCurrentPage,
+    numberOfPages,
+  },
+} = await usePosts()
 </script>
 
 <template>
   <main>
     <div v-show="posts" class="card-columns">
       <div v-for="post in paginatedPosts" :key="post.id">
-        <Post :on-title-click="() => setActivePostId(post.id)" :post="post" />
+        <Post :on-title-click="() => (activePostId = post.id)" :post="post" />
       </div>
     </div>
     <ActivePost
